@@ -1,6 +1,7 @@
 import jsPDF from "jspdf";
 import { twMerge } from "tailwind-merge";
 import { type ClassValue, clsx } from "clsx";
+import { google } from 'googleapis';
 
 const adjectives = [
   "Happy",
@@ -119,3 +120,23 @@ export const exportToPdf = () => {
   // download the pdf
   doc.save("canvas.pdf");
 };
+
+
+
+// Получаем путь к файлу с ключом сервисного аккаунта из переменных окружения
+const serviceAccountKeyPath = process.env["CLIENT_SECRET "];
+
+if (!serviceAccountKeyPath) {
+  throw new Error('Service account key file path is not provided.');
+}
+
+// Аутентификация с помощью ключа службы
+const auth = new google.auth.GoogleAuth({
+  keyFile: serviceAccountKeyPath,
+  scopes: ['https://www.googleapis.com/auth/drive'],
+});
+
+
+
+
+
