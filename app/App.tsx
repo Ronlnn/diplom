@@ -1,5 +1,9 @@
 "use client";
 
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+
+
 import { fabric } from "fabric";
 import { useEffect, useRef, useState } from "react";
 
@@ -34,6 +38,7 @@ const Home = () => {
    */
   const undo = useUndo();
   const redo = useRedo();
+
 
   /**
    * useStorage is a hook provided by Liveblocks that allows you to store

@@ -23,6 +23,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       <Room>
         <TooltipProvider>{children}</TooltipProvider>
       </Room>
+
     </body>
   </html>
 );

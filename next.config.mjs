@@ -6,6 +6,10 @@ const nextConfig = {
       bufferutil: "commonjs bufferutil",
       canvas: "commonjs canvas",
     });
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
     // config.infrastructureLogging = { debug: /PackFileCache/ };
     return config;
   },
