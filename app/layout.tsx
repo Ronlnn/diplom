@@ -28,10 +28,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
 
         <Providers>
           <Appbar />
+        </Providers>
           <TooltipProvider>
+
             {children}
           </TooltipProvider>
-        </Providers>
+
       </Room>
     </body>
   </html>
