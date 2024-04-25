@@ -1,6 +1,12 @@
 import { exportToPdf } from "@/lib/utils";
 
+import google  from 'next-auth/providers/google';
+
+// Использование signIn для аутентификации через Google
+
+
 import { Button } from "../ui/button";
+import { signIn } from "next-auth/react";
 
 const Export = () => (
   <div className='flex flex-col gap-3 px-5 py-3'>
@@ -12,6 +18,9 @@ const Export = () => (
     >
       Export to PDF
     </Button>
+
+
+
   </div>
 );
 

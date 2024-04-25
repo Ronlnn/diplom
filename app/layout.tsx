@@ -5,6 +5,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 
 import Room from "./Room";
 
+import GreetingComponent from "@/components/SigninButton";
+import Providers from "@/components/Providers";
+import Appbar from "@/components/Appbar";
+
 export const metadata = {
   title: "Figma Clone",
   description:
@@ -21,7 +25,13 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang='en'>
     <body className={`${workSans.className} bg-primary-grey-200`}>
       <Room>
-        <TooltipProvider>{children}</TooltipProvider>
+
+        <Providers>
+          <Appbar />
+          <TooltipProvider>
+            {children}
+          </TooltipProvider>
+        </Providers>
       </Room>
     </body>
   </html>

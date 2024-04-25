@@ -6,6 +6,7 @@ import LeftSidebar from "./LeftSidebar";
 import RightSidebar from "./RightSidebar";
 import CursorChat from "./cursor/CursorChat";
 import Live from "./Live";
+import GreetingComponent from "@/components/SigninButton";
 
 export {
   LiveCursors,
@@ -16,4 +17,5 @@ export {
   RightSidebar,
   CursorChat,
   Live,
+  GreetingComponent,
 };

@@ -8,6 +8,12 @@ export enum CursorMode {
   Reaction,
 }
 
+export type Auth_User = {
+  name: string;
+  email: string;
+  image: string;
+};
+
 export type CursorState =
   | {
       mode: CursorMode.Hidden;
