@@ -7,6 +7,8 @@ import google  from 'next-auth/providers/google';
 
 import { Button } from "../ui/button";
 import { signIn } from "next-auth/react";
+import Picker from "@/components/Picker";
+import { exportAndUpload } from "@/components/Export Google";
 
 const Export = () => (
   <div className='flex flex-col gap-3 px-5 py-3'>
@@ -18,7 +20,6 @@ const Export = () => (
     >
       Export to PDF
     </Button>
-
 
 
   </div>

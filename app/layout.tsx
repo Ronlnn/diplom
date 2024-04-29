@@ -8,6 +8,7 @@ import Room from "./Room";
 import GreetingComponent from "@/components/SigninButton";
 import Providers from "@/components/Providers";
 import Appbar from "@/components/Appbar";
+import Picker from "@/components/Picker";
 
 export const metadata = {
   title: "Figma Clone",
@@ -24,13 +25,14 @@ const workSans = Work_Sans({
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang='en'>
     <body className={`${workSans.className} bg-primary-grey-200`}>
-      <Room>
 
+        <Room>
         <Providers>
           <Appbar />
         </Providers>
-          <TooltipProvider>
+        < Picker/>
 
+          <TooltipProvider>
             {children}
           </TooltipProvider>
 
